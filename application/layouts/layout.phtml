@@ -1,0 +1,78 @@
+<?php
+$user=$this->user;
+$title=$this->title;
+$version=$this->version;
+$content=$layoutVars['content'];
+
+$CopyCompany='Andrés Carballo';
+$CopyYear='2013';		
+?>
+<!--   
+<!DOCTYPE html PUBLIC 
+	"-//W3C//DTD XHTML 1.0 Strict//EN" 
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+-->
+
+<!DOCTYPE html>	
+<html lang="en">
+<head>
+	<title><?= htmlspecialchars($title)?></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="stylesheet" href="/assets/css/reset.css" type="text/css">
+	<link rel="stylesheet" href="/assets/css/bootstrap.min.css" media="screen">
+	<link rel="stylesheet" href="/assets/css/bootstrap-responsive.css">
+	<link rel="stylesheet" href="/assets/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/assets/css/font-awesome-social.css">
+	<!--[if IE 7]>
+		<link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css">
+	<![endif]-->
+	<link href="/assets/css/main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<div class="container-fluid">
+		<?=$content?>
+		<br/>
+		<!-- Social -->
+		<div>
+			<ul class="social-links inline">
+				<li><a href="https://twitter.com/AndresCarballoN" target="_blank"><i class="icon-twitter-sign icon-2x"></i></a></li>
+				<li><a href="http://www.facebook.com/andres.nercellas" target="_blank"><i class="icon-facebook-sign icon-2x"></i></a></li>
+				<li><a href="http://plus.google.com/u/0/112098829231685419830" target="_blank"><i class="icon-google-plus-sign icon-2x"></i></a></li>
+				<li><a href="http://www.linkedin.com/profile/view?id=248176398" target="_blank"><i class="icon-linkedin-sign icon-2x"></i></a></li>
+				<!-- awessome extended more -->
+				<li><a href="http://www.flickr.com/photos/26498141@N02" target="_blank"><i class="icon-flickr-sign icon-2x"></i></a></li>
+			</ul> 
+		</div>
+		<!-- footer 
+		 <div class="footer">
+		-->
+		<footer class="footer">
+			<p class="pull-left">&copy; <?= htmlspecialchars($CopyCompany)?> <?=htmlspecialchars($CopyYear)?></p>
+			<p class="pull-right"><a href="#">Back to top</a></p>
+		</footer>
+    	<?php include_once("helpers/analyticstracking.php") ?>
+	</div>
+    
+    <!-- javascript 
+     ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!--<script src="/assets/js/main.js" type="text/javascript"></script>-->
+    <!--<script src="/assets/js/jquery-1.9.1.min.js" type="text/javascript"></script>-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="/assets/js/bootstrap-transition.js"></script>
+    <script src="/assets/js/bootstrap-alert.js"></script>
+    <script src="/assets/js/bootstrap-modal.js"></script>
+    <script src="/assets/js/bootstrap-dropdown.js"></script>
+    <script src="/assets/js/bootstrap-scrollspy.js"></script>
+    <script src="/assets/js/bootstrap-tab.js"></script>
+    <script src="/assets/js/bootstrap-tooltip.js"></script>
+    <script src="/assets/js/bootstrap-popover.js"></script>
+    <script src="/assets/js/bootstrap-button.js"></script>
+    <script src="/assets/js/bootstrap-collapse.js"></script>
+    <script src="/assets/js/bootstrap-carousel.js"></script>
+    <script src="/assets/js/bootstrap-typeahead.js"></script>
+</body>
+</html>
