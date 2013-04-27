@@ -1,6 +1,11 @@
 <?php
 
-class controllers_indexController implements controllers_interfaceController{
+/**
+ * errorController
+ * @author Andres
+ *
+ */
+class controllers_errorController implements controllers_interfaceController{
 
 	protected $content;
 
@@ -9,11 +14,19 @@ class controllers_indexController implements controllers_interfaceController{
 	}
 
 	public function indexAction()
-	{		
-		$viewVars=array('title'=>"index",
-				'numQuest'=>$numQuest);
-		$render = new controllers_helpers_render();
-		$this->content = $render->renderView('index/index.phtml',$viewVars);
+	{
+	}
+
+	public function no_controllerAction()
+	{
+		//$render = new controllers_helpers_render();
+		//$this->content = $render->renderView('index/index.php');
+		$this->content = 'no_controllerAction';
+	}
+	
+	public function no_actionAction()
+	{
+		$this->content = 'no_actionAction';
 	}
 	
 	public function errorAction()

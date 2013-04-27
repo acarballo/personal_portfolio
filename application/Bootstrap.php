@@ -61,7 +61,7 @@ class Bootstrap{
 		//Initialice array controllers/actions
 		$controllerActions=array(
 				'index'=>array('index'),
-				'coming-soon'=>array('index')
+				'comingsoon'=>array('index')
 		);
 		$parse=explode('/',$_SERVER['REQUEST_URI']);
 		
@@ -118,9 +118,9 @@ class Bootstrap{
 			}
 		}
 
-		//FIXME
-		$route['controller']='comingsoon';
-		$route['action']='index';
+		//FIXME Way to configurate cominssoon as page
+		//$route['controller']='comingsoon';
+		//$route['action']='index';
 		
 		$this->route=$route;
 		return $this->route;
