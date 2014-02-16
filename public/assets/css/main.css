@@ -5,6 +5,11 @@ body {
     padding-bottom: 60px;
 }
 
+.content{
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
 /* Custom container */
 .container {
 	margin: 0 auto;

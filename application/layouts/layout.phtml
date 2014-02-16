@@ -18,8 +18,19 @@ $CopyYear='2013';
 <html lang="en">
 <head>
 	<title><?= htmlspecialchars($title)?></title>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="description" content="CV Personal de Andrés Carballo">
+	<meta name="author" content="Andrés Carballo">
+	<meta name="Copyright" content="Copyright Andrés Carballo 2013. All Rights Reserved.">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<!-- Open Graph protocol - Facebooks Meta Tags -->
+	<meta property="og:title" content="Andrés Carballo - Site"/>
+	<meta property="og:image" content="http://andrescarballo.hol.es/assets/img/fblogo.png"/>
+	<meta property="og:site_name" content="Andrés Carballo"/>
+	<meta property="og:description" content="Web personal de Andrés Carballo, curriculum vitae"/>
+	<meta property="og:url" content="http://andrescarballo.hol.es" />
 	
 	<link rel="stylesheet" href="/assets/css/reset.css" type="text/css">
 	<link rel="stylesheet" href="/assets/css/bootstrap.min.css" media="screen">
@@ -29,29 +40,47 @@ $CopyYear='2013';
 	<!--[if IE 7]>
 		<link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css">
 	<![endif]-->
+	<!--[if lt IE 9]>
+  		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
 	<link href="/assets/css/main.css" rel="stylesheet" type="text/css">
+	
+	<!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="../assets/ico/favicon.png">
 </head>
 <body>
 	<div class="container-fluid">
-		<?=$content?>
-		<br/>
-		<!-- Social 
-		<div>
-			<ul class="social-links inline">
-				<li><a href="https://twitter.com/AndresCarballoN" target="_blank"><i class="icon-twitter-sign icon-2x"></i></a></li>
-				<li><a href="http://www.facebook.com/andres.nercellas" target="_blank"><i class="icon-facebook-sign icon-2x"></i></a></li>
-				<li><a href="http://plus.google.com/u/0/112098829231685419830" target="_blank"><i class="icon-google-plus-sign icon-2x"></i></a></li>
-				<li><a href="http://www.linkedin.com/profile/view?id=248176398" target="_blank"><i class="icon-linkedin-sign icon-2x"></i></a></li>
-				<li><a href="http://www.flickr.com/photos/26498141@N02" target="_blank"><i class="icon-flickr-sign icon-2x"></i></a></li>
-			</ul> 
+		<div class="navbar navbar-inverse navbar-fixed-top">
+			<div class="navbar-inner">
+        		<div class="container">
+       				<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+       					<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="brand" href="/index">Andrés Carballo</a>
+					<div class="nav-collapse collapse">
+			            <ul class="nav">
+							<li><a href="/index">Curriculum Vitae</a></li>
+							<li><a href="/contact">Contacto</a></li>
+			            </ul>
+		          	</div><!--/.nav-collapse -->	
+        		</div>
+        	</div>
 		</div>
-		-->
-		<!-- footer 
-		 <div class="footer">
-		-->
+		
+		<div class="content">
+		<?=$content?>
+		</div>
+		
 		<footer class="footer">
 			<p class="pull-left">&copy; <?= htmlspecialchars($CopyCompany)?> <?=htmlspecialchars($CopyYear)?></p>
-			<p class="pull-right"><a href="#">Back to top</a></p>
+			<!-- Back to top -->
+			<p class="pull-right"><a href="#">Inicio</a></p>
 		</footer>
     	<?php include_once("helpers/analyticstracking.php") ?>
 	</div>
@@ -62,6 +91,8 @@ $CopyYear='2013';
     <!--<script src="/assets/js/main.js" type="text/javascript"></script>-->
     <!--<script src="/assets/js/jquery-1.9.1.min.js" type="text/javascript"></script>-->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <!--  -->
     <script src="/assets/js/bootstrap-transition.js"></script>
     <script src="/assets/js/bootstrap-alert.js"></script>
     <script src="/assets/js/bootstrap-modal.js"></script>

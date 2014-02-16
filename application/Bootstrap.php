@@ -37,7 +37,7 @@ class Bootstrap{
 			$_SESSION['app']['user']='guest';
 			$_SESSION['app']['rol']=3;
 			$_SESSION['app']['title']='Personal Portfolio';
-			$_SESSION['app']['version']="1.0.1b";
+			$_SESSION['app']['version']="1.0.3b";
 		}
 	}
 	
@@ -61,6 +61,7 @@ class Bootstrap{
 		//Initialice array controllers/actions
 		$controllerActions=array(
 				'index'=>array('index'),
+				'contact'=>array('index'),
 				'comingsoon'=>array('index')
 		);
 		$parse=explode('/',$_SERVER['REQUEST_URI']);
@@ -108,6 +109,7 @@ class Bootstrap{
 		
 		$permissions=array();
 		$permissions['index']['index']=3;
+		$permissions['contact']['index']=3;
 		$permissions['comingsoon']['index']=3;
 		
 		if(isset($permissions[$route['controller']][$route['action']])){
@@ -121,7 +123,6 @@ class Bootstrap{
 		//FIXME Way to configurate cominssoon as page
 		//$route['controller']='comingsoon';
 		//$route['action']='index';
-		
 		$this->route=$route;
 		return $this->route;
 		
